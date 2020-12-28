@@ -31,7 +31,7 @@ mongoose.connect(dbURI)
   }))
   .catch((err) => console.log(err));
 app.use('/api', parent_router); 
-
+app.get('/test', (req,res) => res.send(`<h1>Deployed on Heroku</h1>`))
 // app.listen(process.env.port||5000,function(){
 //     console.log("Testing Server is listning at port 5000")
 // })
