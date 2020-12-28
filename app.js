@@ -27,8 +27,8 @@ app.use(express.static('public'));
 //   }))
 //   .catch((err) => console.log(err));
 // app.use('/api', parent_router); 
-
-app.listen(process.env.port||5000,function(){
+const port = process.env.PORT || '5000';
+app.listen(port,function(){
     console.log("Testing Server is listning at port 5000")
 })
 
