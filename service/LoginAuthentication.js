@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
-// const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken')
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/test_db", {  useCreateIndex: true });
+// mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://admintest:admintest@cluster0.y02b6.mongodb.net/test_db", {  useCreateIndex: true });
 // mongoose.Promise = global.Promise;
 
 const login_model = require('../model/login_model');

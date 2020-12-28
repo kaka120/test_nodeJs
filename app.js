@@ -4,10 +4,10 @@ var multer = require('multer');
 
 const mongoose = require('mongoose');
 
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useFindAndModify', false);
-mongoose.set('useCreateIndex', true);
-mongoose.set('useUnifiedTopology', true);
+ mongoose.set('useNewUrlParser', true);
+ mongoose.set('useFindAndModify', false);
+ mongoose.set('useCreateIndex', true);
+ mongoose.set('useUnifiedTopology', true);
 
 var upload = multer();
 const app= express() 
@@ -21,15 +21,16 @@ app.use(upload.array());
 app.use(express.static('public'));
 
 
-const dbURI = 'mongodb://localhost/test_db';
+//const dbURI = 'mongodb://localhost/test_db';
+//const dbURI = 'mongodb+srv://admintest:admin123test@cluster0.y02b6.mongodb.net/test12'
+
+const dbURI = 'mongodb+srv://admintest:admin123test@cluster0.y02b6.mongodb.net/test12?retryWrites=true&w=majority'
 mongoose.connect(dbURI)
   .then((result) => app.listen(5000,function(){
       console.log("Testing Server is listning at port 5000")
   }))
   .catch((err) => console.log(err));
 app.use('/api', parent_router); 
-
-
 
 // app.listen(process.env.port||5000,function(){
 //     console.log("Testing Server is listning at port 5000")
