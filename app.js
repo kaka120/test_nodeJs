@@ -24,7 +24,7 @@ const port = process.env.PORT || '5000';
 const dbURI = ''
 mongoose.connect(dbURI)
   .then((result) => app.listen(port,function(){
-      console.log("Testing Server is listning at port 5000")
+      console.log(`Server started on Port ${port}`);
   }))
   .catch((err) => console.log(err));
 app.use('/api', parent_router); 
