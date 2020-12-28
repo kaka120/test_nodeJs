@@ -21,7 +21,7 @@ app.use(upload.array());
 app.use(express.static('public'));
 const port = process.env.PORT || '5000';
 
-const dbURI = 'mongodb+srv://admintest:admin123test@cluster0.y02b6.mongodb.net/test12?retryWrites=true&w=majority'
+const dbURI = ''
 mongoose.connect(dbURI)
   .then((result) => app.listen(port,function(){
       console.log("Testing Server is listning at port 5000")
