@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 app.use(upload.array()); 
 app.use(express.static('public'));
-const port = process.env.PORT || '5000';
+const port = process.env.PORT || '5000' ;
 
 
 
